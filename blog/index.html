@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Resources & Guides | Sonomarin Home Buyers Blog</title>
+  <meta name="description" content="Expert guides for Sonoma and Marin County homeowners. Learn how to sell fast, stop foreclosure, handle probate, and more. From local cash home buyers Evan & Alex." />
+  <meta name="keywords" content="sell house fast Sonoma County, real estate guides Marin County, foreclosure help Sonoma, probate home sale California, cash home buyers blog" />
+  <link rel="canonical" href="https://www.sonomarinhomebuyers.com/blog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF7F2; --warm-white: #FFFCF8; --forest: #2C4A3E;
+      --forest-light: #3D6B5C; --forest-dark: #1A2E27; --gold: #C8952A;
+      --gold-light: #E8B84B; --text-dark: #1C2420; --text-mid: #4A5550;
+      --text-light: #7A8B85; --border: rgba(44, 74, 62, 0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--text-dark); line-height: 1.6; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,252,248,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--forest); text-decoration: none; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta { background: var(--forest); color: #fff !important; padding: 0.5rem 1.25rem; border-radius: 6px; }
+    .hero { background: var(--forest); color: #fff; padding: 4rem 2rem 3rem; text-align: center; }
+    .hero-eyebrow { display: inline-block; background: rgba(200,149,42,0.2); color: var(--gold-light); border: 1px solid rgba(200,149,42,0.4); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
+    .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.25rem); color: var(--forest-dark); margin-bottom: 2.5rem; }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .post-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s, border-color 0.2s; display: flex; flex-direction: column; }
+    .post-card:hover { box-shadow: 0 8px 30px rgba(44,74,62,0.12); border-color: var(--forest-light); }
+    .post-tag { display: inline-block; background: rgba(44,74,62,0.08); color: var(--forest); font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 100px; margin-bottom: 1rem; }
+    .post-card h2 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--forest-dark); line-height: 1.3; margin-bottom: 0.75rem; }
+    .post-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; flex-grow: 1; }
+    .post-link { display: inline-block; margin-top: 1.25rem; font-size: 0.85rem; font-weight: 600; color: var(--forest); }
+    .coming-soon { background: var(--cream); border: 1px dashed var(--border); border-radius: 12px; padding: 3rem 2rem; text-align: center; margin-top: 2rem; }
+    .coming-soon h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--forest-dark); margin-bottom: 0.75rem; }
+    .coming-soon p { font-size: 0.9rem; color: var(--text-mid); }
+    .cta-section { background: var(--forest); color: #fff; border-radius: 16px; padding: 3rem; text-align: center; margin-top: 4rem; }
+    .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: #fff; margin-bottom: 1rem; }
+    .cta-section p { color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: #fff; padding: 0.9rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; }
+    .btn-phone { display: inline-block; color: var(--gold-light); padding: 0.9rem 2rem; border: 2px solid rgba(200,149,42,0.4); border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 1rem; margin-left: 1rem; }
+    footer { background: var(--forest-dark); color: rgba(255,255,255,0.6); padding: 3rem 2rem; text-align: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem; }
+    .footer-logo span { color: var(--gold-light); }
+    footer p { font-size: 0.85rem; margin-bottom: 0.5rem; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; list-style: none; margin: 1.5rem 0; font-size: 0.85rem; }
+    @media (max-width: 768px) { .nav-links { display: none; } .btn-phone { margin-left: 0; margin-top: 1rem; display: block; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="nav-logo">Sonomarin <span>Home Buyers</span></a>
+    <ul class="nav-links">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/#situations">We Can Help</a></li>
+      <li><a href="/#cities">Areas We Serve</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/#contact" class="nav-cta">Get My Cash Offer</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Real Estate Resources</div>
+    <h1>Guides for Sonoma & Marin County Homeowners</h1>
+    <p>Honest, practical advice from local cash home buyers Evan & Alex. No fluff — just the information you need to make the best decision for your situation.</p>
+  </div>
+
+  <div class="container">
+    <div class="section-label">Latest Article</div>
+    <h2 class="section-title">Resources & Guides</h2>
+
+```
+<div class="posts-grid">
+  <a href="/blog/how-to-sell-an-inherited-house-sonoma-county" class="post-card">
+    <span class="post-tag">Inherited Property</span>
+    <h2>How to Sell an Inherited House in Sonoma County</h2>
+    <p>Inherited a home in Sonoma County? Learn how probate works, your selling options, and how to navigate multiple heirs and deferred maintenance.</p>
+    <span class="post-link">Read the guide &rarr;</span>
+  </a>
+</div>
+
+<div class="coming-soon">
+  <h3>More Guides Coming Soon</h3>
+  <p>We publish a new resource every two weeks. Topics coming up include stopping foreclosure, selling during divorce, probate sales, fire damaged homes, and more. Check back soon or call us directly at (707) 390-0399 with any questions.</p>
+</div>
+
+<div class="cta-section">
+  <h2>Have a Question About Your Specific Situation?</h2>
+  <p>Every homeowner's situation is different. Give us a call or send us a message — we'll give you an honest answer, even if selling to us isn't the right move for you.</p>
+  <a href="tel:7073900399" class="btn-gold">Call (707) 390-0399</a>
+  <a href="/#contact" class="btn-phone">Send a Message</a>
+</div>
+```
+
+  </div>
+
+  <footer>
+    <div class="footer-logo">Sonomarin <span>Home Buyers</span></div>
+    <p>Local cash home buyers serving Sonoma &amp; Marin County, California</p>
+    <ul class="footer-links">
+      <li><a href="/#how-it-works">How It Works</a></li>
+      <li><a href="/#situations">We Can Help</a></li>
+      <li><a href="/#cities">Cities</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <p><a href="tel:7073900399">(707) 390-0399</a> &nbsp;|&nbsp; <a href="mailto:contact@sonomarinhomebuyers.com">contact@sonomarinhomebuyers.com</a></p>
+    <p style="margin-top:1.5rem;">&copy; 2025 Sonomarin Home Buyers LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
