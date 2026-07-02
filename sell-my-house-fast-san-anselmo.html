@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -92,6 +91,7 @@
     .form-group input, .form-group select { padding: 0.65rem 0.85rem; border: 1.5px solid var(--border); border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--text-dark); background: var(--cream); outline: none; }
     .btn-primary { width: 100%; background: var(--gold); color: #fff; border: none; padding: 0.9rem 1.5rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; }
     .form-disclaimer { font-size: 0.75rem; color: var(--text-light); text-align: center; margin-top: 0.75rem; }
+    .hp { position: absolute; left: -9999px; top: -9999px; }
     .hero-trust { display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap; }
     .trust-item { display: flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.7); font-size: 0.85rem; }
     .trust-check { width: 18px; height: 18px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: #fff; flex-shrink: 0; }
@@ -155,16 +155,19 @@
     <p class="hero-sub">We're local Marin County buyers. We'll make you a fair, no-obligation cash offer within 24 hours — no repairs, no agent fees, no waiting.</p>
     <form class="hero-form" id="contact-form" action="https://formspree.io/f/mojrkwal" method="POST">
       <h2>Get Your Free Cash Offer in San Anselmo</h2>
+      <input type="hidden" name="_subject" value="New Lead — San Anselmo — Sonomarin Home Buyers" />
+      <input type="hidden" name="Lead Source" value="San Anselmo City Page — Hero Form" />
+      <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
       <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane" /></div>
-        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith" /></div>
+        <div class="form-group"><label>First Name</label><input type="text" name="First Name" placeholder="Jane" required /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" name="Last Name" placeholder="Smith" /></div>
       </div>
-      <div class="form-group"><label>San Anselmo Property Address</label><input type="text" placeholder="123 Main St, San Anselmo, CA" /></div>
+      <div class="form-group"><label>San Anselmo Property Address</label><input type="text" name="Property Address" placeholder="123 Main St, San Anselmo, CA" required /></div>
       <div class="form-row">
-        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(707) 555-0100" /></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" name="Phone" placeholder="(707) 555-0100" required /></div>
         <div class="form-group">
           <label>Desired Timeline</label>
-          <select><option value="">Select...</option><option>ASAP (under 2 weeks)</option><option>1-2 months</option><option>3-6 months</option><option>Just exploring</option></select>
+          <select name="Timeline"><option value="">Select...</option><option>ASAP (under 2 weeks)</option><option>1-2 months</option><option>3-6 months</option><option>Just exploring</option></select>
         </div>
       </div>
       <button type="submit" class="btn-primary">Get My Free Cash Offer &rarr;</button>
@@ -186,52 +189,54 @@
           <p>If you own a home in San Anselmo and need to sell quickly, Sonomarin Home Buyers is your local solution. We're Evan and Alex — real people, based right here in Marin County — and we buy houses directly from homeowners throughout San Anselmo and the surrounding area.</p>
           <p>We know San Anselmo well. We're familiar with Downtown San Anselmo, Red Hill, Sleepy Hollow, Brookside, and the Saunders Avenue corridor. We understand what homes in this market are worth, and we make offers that reflect genuine local knowledge — not automated estimates from out-of-town algorithms.</p>
 
-```
-      <h2>Why San Anselmo Homeowners Choose Us</h2>
-      <p>San Anselmo is a tight-knit community with strong demand and limited inventory. Its small-town feel and top-rated schools make it consistently competitive for buyers.</p>
-      <p>Whatever is driving your decision to sell, we offer a completely different path from the traditional listing process:</p>
-      <ul>
-        <li><strong>No repairs or cleaning required</strong> — sell your San Anselmo home exactly as it is</li>
-        <li><strong>No real estate agent commissions</strong> — save the typical 5-6% you'd pay an agent</li>
-        <li><strong>No financing contingencies</strong> — we pay cash, so no risk of a deal falling through</li>
-        <li><strong>Close in 7 days or on your schedule</strong> — we work around your timeline</li>
-        <li><strong>Zero closing costs</strong> — we cover them so your offer is your take-home amount</li>
-      </ul>
+          <h2>Why San Anselmo Homeowners Choose Us</h2>
+          <p>San Anselmo is a tight-knit community with strong demand and limited inventory. Its small-town feel and top-rated schools make it consistently competitive for buyers.</p>
+          <p>Whatever is driving your decision to sell, we offer a completely different path from the traditional listing process:</p>
+          <ul>
+            <li><strong>No repairs or cleaning required</strong> — sell your San Anselmo home exactly as it is</li>
+            <li><strong>No real estate agent commissions</strong> — save the typical 5-6% you'd pay an agent</li>
+            <li><strong>No financing contingencies</strong> — we pay cash, so no risk of a deal falling through</li>
+            <li><strong>Close in 7 days or on your schedule</strong> — we work around your timeline</li>
+            <li><strong>Zero closing costs</strong> — we cover them so your offer is your take-home amount</li>
+          </ul>
 
-      <h2>Situations We Help San Anselmo Homeowners With</h2>
-      <p>We work with homeowners in San Anselmo facing all kinds of circumstances — no judgment, just honest help finding the right path forward.</p>
-      <ul>
-        <li>Facing foreclosure or Notice of Default in San Anselmo</li>
-        <li>Going through a divorce and need to sell quickly</li>
-        <li>Inherited a property you don't want to keep or maintain</li>
-        <li>Dealing with probate and need a straightforward sale</li>
-        <li>Property has major damage — fire, water, foundation issues</li>
-        <li>Tired landlord with problem tenants or a rental you're done managing</li>
-        <li>Relocating quickly for work or family reasons</li>
-        <li>Behind on mortgage payments or property taxes</li>
-        <li>Downsizing and want a simple, fast sale with no hassle</li>
-      </ul>
+          <h2>Situations We Help San Anselmo Homeowners With</h2>
+          <p>We work with homeowners in San Anselmo facing all kinds of circumstances — no judgment, just honest help finding the right path forward.</p>
+          <ul>
+            <li>Facing foreclosure or Notice of Default in San Anselmo</li>
+            <li>Going through a divorce and need to sell quickly</li>
+            <li>Inherited a property you don't want to keep or maintain</li>
+            <li>Dealing with probate and need a straightforward sale</li>
+            <li>Property has major damage — fire, water, foundation issues</li>
+            <li>Tired landlord with problem tenants or a rental you're done managing</li>
+            <li>Relocating quickly for work or family reasons</li>
+            <li>Behind on mortgage payments or property taxes</li>
+            <li>Downsizing and want a simple, fast sale with no hassle</li>
+          </ul>
 
-      <h2>How the Process Works in San Anselmo</h2>
-      <p><strong>Step 1 — Tell us about your property.</strong> Fill out the form on this page or call us at (707) 390-0399. We'll ask a few simple questions about your home — it takes about 5 minutes.</p>
-      <p><strong>Step 2 — Receive your cash offer.</strong> Within 24 hours, we'll present you with a written, no-obligation cash offer. We look at San Anselmo's beloved antique row downtown, its creekside setting, and the quiet tree-lined streets that make it one of Marin's most charming family communities to make sure our offer reflects what's fair in this specific market.</p>
-      <p><strong>Step 3 — Close on your schedule.</strong> If you accept, we handle all the paperwork and coordinate with a local title company. We can close in as little as 7 days, or take the time you need.</p>
-    </div>
-    <div>
-      <div class="sidebar-card"><form action="https://formspree.io/f/mojrkwal" method="POST">
-        <h3>Get Your San Anselmo Cash Offer</h3>
-        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Smith" /></div>
-        <div class="form-group"><label>Property Address</label><input type="text" placeholder="123 Main St, San Anselmo" /></div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(707) 555-0100" /></div>
-        <button type="submit" class="btn-primary">Get My Free Offer &rarr;</button>
-        </form><a href="tel:7073900399" class="sidebar-phone">&#128222; (707) 390-0399</a>
-        <p style="font-size:0.75rem;color:var(--text-light);text-align:center;margin-top:0.75rem;">No obligation. We respond in 24 hours.</p>
+          <h2>How the Process Works in San Anselmo</h2>
+          <p><strong>Step 1 — Tell us about your property.</strong> Fill out the form on this page or call us at (707) 390-0399. We'll ask a few simple questions about your home — it takes about 5 minutes.</p>
+          <p><strong>Step 2 — Receive your cash offer.</strong> Within 24 hours, we'll present you with a written, no-obligation cash offer. We look at San Anselmo's beloved antique row downtown, its creekside setting, and the quiet tree-lined streets that make it one of Marin's most charming family communities to make sure our offer reflects what's fair in this specific market.</p>
+          <p><strong>Step 3 — Close on your schedule.</strong> If you accept, we handle all the paperwork and coordinate with a local title company. We can close in as little as 7 days, or take the time you need.</p>
+        </div>
+        <div>
+          <div class="sidebar-card">
+            <form action="https://formspree.io/f/mojrkwal" method="POST">
+              <h3>Get Your San Anselmo Cash Offer</h3>
+              <input type="hidden" name="_subject" value="New Lead — San Anselmo — Sonomarin Home Buyers" />
+              <input type="hidden" name="Lead Source" value="San Anselmo City Page — Sidebar Form" />
+              <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
+              <div class="form-group"><label>Your Name</label><input type="text" name="Name" placeholder="Jane Smith" required /></div>
+              <div class="form-group"><label>Property Address</label><input type="text" name="Property Address" placeholder="123 Main St, San Anselmo" required /></div>
+              <div class="form-group"><label>Phone Number</label><input type="tel" name="Phone" placeholder="(707) 555-0100" required /></div>
+              <button type="submit" class="btn-primary">Get My Free Offer &rarr;</button>
+            </form>
+            <a href="tel:7073900399" class="sidebar-phone">&#128222; (707) 390-0399</a>
+            <p style="font-size:0.75rem;color:var(--text-light);text-align:center;margin-top:0.75rem;">No obligation. We respond in 24 hours.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-```
-
   </section>
 
   <section class="situations-bg">
