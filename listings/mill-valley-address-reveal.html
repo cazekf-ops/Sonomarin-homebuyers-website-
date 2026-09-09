@@ -28,8 +28,12 @@
   header nav a{color:#fff; text-decoration:none; margin-left:22px; font-size:15px;}
   header nav a:first-child{margin-left:0;}
 
-  main{max-width:680px; margin:0 auto; padding:64px 24px 80px;}
+  main{max-width:900px; margin:0 auto; padding:64px 24px 80px;}
+  .gallery-main{width:100%; border-radius:2px; display:block; object-fit:cover; height:360px; margin-bottom:10px;}
+  .gallery-thumbs{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px;}
+  .gallery-thumbs img{width:calc(33.333% - 7px); height:120px; object-fit:cover; border-radius:2px; display:block;}
   .panel{
+    max-width:640px; margin:0 auto;
     background:var(--blue); color:#fff; border-radius:2px; padding:40px 32px;
   }
   .badge{
@@ -44,7 +48,11 @@
     display:inline-block; margin-top:20px; background:var(--gold); color:var(--ink);
     text-decoration:none; padding:12px 22px; border-radius:2px; font-weight:500; font-size:15px;
   }
-  .back{margin-top:28px; font-size:15px;}
+  .back{max-width:640px; margin:28px auto 0; font-size:15px;}
+
+  @media (max-width:600px){
+    .gallery-thumbs img{width:calc(50% - 5px);}
+  }
 
   footer{background:var(--ink); color:#cfd8e0; padding:36px 24px; font-size:14px; margin-top:70px;}
   footer .wrap{max-width:680px; margin:0 auto;}
@@ -64,6 +72,19 @@
 </header>
 
 <main>
+  <img class="gallery-main" src="/images/listings/347-hazel-ave-01.jpg" alt="Exterior of 347 Hazel Ave, Mill Valley, tucked among redwood trees">
+  <div class="gallery-thumbs">
+    <img src="/images/listings/347-hazel-ave-02.jpg" alt="Exterior with attached two-car garage and driveway">
+    <img src="/images/listings/347-hazel-ave-03.jpg" alt="Home viewed from within the surrounding redwood grove">
+    <img src="/images/listings/347-hazel-ave-04.jpg" alt="Roofline and upper story seen through the redwoods">
+    <img src="/images/listings/347-hazel-ave-05.jpg" alt="Aerial view of the roof nestled among the trees">
+    <img src="/images/listings/347-hazel-ave-06.jpg" alt="Kitchen and dining area beneath a skylight">
+    <img src="/images/listings/347-hazel-ave-07.jpg" alt="Kitchen hallway leading to French doors and the back deck">
+    <img src="/images/listings/347-hazel-ave-08.jpg" alt="Living room with built-in bookshelves and brick fireplace">
+    <img src="/images/listings/347-hazel-ave-09.jpg" alt="Dining room with fireplace and skylight">
+    <img src="/images/listings/347-hazel-ave-10.jpg" alt="Kitchen sink pass-through to the dining area">
+  </div>
+
   <div class="panel">
     <span class="badge">Available &ndash; Off Market</span>
     <h1>Thanks &mdash; here's the address</h1>
